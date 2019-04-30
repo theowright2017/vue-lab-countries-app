@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Lab</title>
+	<link rel="stylesheet" href="./css/style.css">
+	<script src="./js/bundle.js"></script>
+</head>
+<body>
+		<div id="app">
+	    <header>
+	      <h1>Country Information</h1>
+	    </header>
+
+      <div class="">
+        <h3>Total World Population: {{totalPopulation}}</h3>
+
+      </div>
+
+    <select class="" v-model="chosenCountry" >
+      <option   v-for="country in countries" v-bind:value="country" >{{ country.name }}</option>
+      <button >Save as Favourite</button>
+    </select>
+    <section>
+
+      <div class="" >
+          <h3>{{chosenCountry.name}}</h3>
+          <p>Population: {{chosenCountry.population}}</p>
+          <p>Capital City: {{chosenCountry.capital}}</p>
+
+          <img v-bind:src="chosenCountry.flag" alt="">
+
+      </div>
+    </section>
+
+
+
+</div>
+
+
+
+    </body>
+    </html>
